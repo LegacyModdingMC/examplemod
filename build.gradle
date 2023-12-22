@@ -49,10 +49,6 @@ subprojects {
             url = "https://maven.wagyourtail.xyz/releases"
         }
         maven {
-            name = 'overmind'
-            url = 'https://gregtech.overminddl1.com/'
-        }
-        maven {
             name = 'sponge'
             url = 'https://repo.spongepowered.org/maven/'
         }
