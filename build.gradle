@@ -44,6 +44,7 @@ subprojects {
                 includeGroup "maven.modrinth"
             }
         }
+
         maven {
             name = "wagyourtail releases"
             url = "https://maven.wagyourtail.xyz/releases"
@@ -51,6 +52,13 @@ subprojects {
         maven {
             name = 'sponge'
             url = 'https://repo.spongepowered.org/maven/'
+        }
+        maven {
+            name = 'overminddl1'
+            url = 'https://gregtech.overminddl1.com/'
+            content {
+                excludeGroupByRegex "de.oceanlabs.mcp"
+            }
         }
         maven {
             name = "GTNH Maven"
