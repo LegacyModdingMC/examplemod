@@ -1,0 +1,50 @@
+// Adjust the output jar name here
+archivesBaseName = "${mod_name}-Forge-${minecraft_version}"
+
+dependencies {
+    // Add your dependencies here
+
+    // Unimixins. Can be removed if not needed
+    modImplementation("com.github.LegacyModdingMC.UniMixins:unimixins-all-1.7.10:"+project.unimixins_version+":dev")
+
+    // Do not edit or remove
+    implementation project(":Common")
+}
+
+// Maven Publishing. Remove if not needed
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId base.archivesName.get()
+            from components.java
+        }
+    }
+    repositories {
+        // Add your maven repository here
+        maven {
+            url "file://" + System.getenv("local_maven")
+        }
+    }
+}
+
+/**
+ * ===============================================================================
+ * =       DO NOT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING        =
+ * ===============================================================================
+ */
+
+unimined.minecraft {
+    minecraftForge {
+        loader forge_version+"-"+minecraft_version
+    }
+}
+
+processResources {
+    from project(":Common").sourceSets.main.resources
+}
+
+compileTestJava.enabled = false
+
+tasks.withType(JavaCompile).configureEach {
+    source(project(":Common").sourceSets.main.allSource)
+}
