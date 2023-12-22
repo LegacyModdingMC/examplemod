@@ -37,6 +37,15 @@ unimined.minecraft {
     legacyFabric {
         loader fabric_loader
     }
+
+    runs {
+        config("client") {
+            javaVersion = JavaVersion.VERSION_17
+        }
+        config("server") {
+            javaVersion = JavaVersion.VERSION_17
+        }
+    }
 }
 
 processResources {
