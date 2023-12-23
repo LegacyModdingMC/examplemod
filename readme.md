@@ -12,22 +12,43 @@ This project is powered by [Unimined](https://github.com/unimined/unimined).
 
 ### Using this template
 
-*Before you start, please note that this project has been built on, and tested ONLY on IntelliJ idea. Other IDE's have not been tested, and cannot be guaranteed to work.*
-
 1) Clone, download the project to your computer, or generate a new repository from this template
-2) Open up `settings.gradle` and replace `rootProject.name = 'LegacyModdingExampleMod'` with the name of your project
-3) Open up `gradle.properties` and replace the following values:
+1) Open up `settings.gradle` and replace `rootProject.name = 'LegacyModdingExampleMod'` with the name of your project
+1) Open up `gradle.properties` and replace the following values:
    1) `mod_author` -> Your name
-   2) `mod_id` -> The id of your mod. For example: `myawesomemod`
-   3) `mod_name` -> The name of your mod. This will be used for the output jars
-   4) `minecraft_version` -> The minecraft version your project targets
-   5) `fabric_loader` -> The fabric loader version to use. Find this [here](https://grayray75.github.io/LegacyFabric-Versions/)
-   6) `fabric_api` -> The Fabric API for your minecraft version. Find this [here](https://grayray75.github.io/LegacyFabric-Versions/)
-   7) `forge_version` -> The Forge version for your Minecraft version to use
+   1) `mod_id` -> The id of your mod. For example: `myawesomemod`
+   1) `mod_name` -> The name of your mod. This will be used for the output jars
+   1) `minecraft_version` -> The minecraft version your project targets
+   1) `fabric_loader` -> The fabric loader version to use. Find this [here](https://grayray75.github.io/LegacyFabric-Versions/)
+   1) `fabric_api` -> The Fabric API for your minecraft version. Find this [here](https://grayray75.github.io/LegacyFabric-Versions/)
+   1) `forge_version` -> The Forge version for your Minecraft version to use
 
-4) If your default JVM/JDK is not Java 8 you will encounter an error when opening the project. This error is fixed by going to File > Settings > Build, Execution, Deployment > Build Tools > Gradle > Gradle JVMand changing the value to a valid Java 8 JVM. You will also need to set the Project SDK to Java 8. This can be done by going to File > Project Structure > Project SDK. Once both have been set open the Gradle tab in IDEA and click the refresh button to reload the project.
-5) Replace the contents of `LICENSE` with your mod license
-6) Replace the contents of `readme.md` with your mod readme
+1) If your default JVM/JDK is not Java 8 you will encounter an error when opening the project. This error is fixed by going to File > Settings > Build, Execution, Deployment > Build Tools > Gradle > Gradle JVMand changing the value to a valid Java 8 JVM. You will also need to set the Project SDK to Java 8. This can be done by going to File > Project Structure > Project SDK. Once both have been set open the Gradle tab in IDEA and click the refresh button to reload the project.
+1) Replace the contents of `LICENSE` with your mod license
+1) Replace the contents of `readme.md` with your mod readme
+
+### Importing into IntelliJ Idea
+
+`File > Open` selent the build.gradle, it should just work, you should see an elephant icon with gradle text on the right, your gradle tasks are there.
+
+I also highly recommend the [MCDEV](https://mcdev.io/) plugin.
+
+### Importing into VSCode/VSCodium
+
+Install these plugins
+1) [Language Support for Java](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+1) [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
+1) [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+1) [Gradle for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle)
+
+`File > Open Folder` select the project folder, you should see an elephant icon, your gradle tasks are there.
+
+### Importing into Eclipse
+
+`File > Import... > Existing Gradle Project` select the folder, you should see an elephant icon with gradle text on the bottom, your gradle tasks are there.
+
+### Running in dev
+Run the `Fabric > unimined_runs > runClient` task for the Fabric client for example, `Forge > unimined_runs > runServer` for the forge server.
 
 ***
 
