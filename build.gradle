@@ -76,11 +76,11 @@ subprojects {
         annotationProcessor "com.github.bsideup.jabel:jabel-javac-plugin:${jabel_version}"
         compileOnly "com.github.bsideup.jabel:jabel-javac-plugin:${jabel_version}"
 
-        compileOnly "org.projectlombok:lombok:${lombok_version}"
-        annotationProcessor "org.projectlombok:lombok:${lombok_version}"
+        compileOnly 'org.projectlombok:lombok:1.18.30'
+        annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
-        testCompileOnly "org.projectlombok:lombok:${lombok_version}"
-        testAnnotationProcessor "org.projectlombok:lombok:${lombok_version}"
+        testCompileOnly 'org.projectlombok:lombok:1.18.30'
+        testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
     }
 
     jar {
@@ -184,5 +184,12 @@ subprojects {
         }
 
         build.finalizedBy(copyAllArtifacts)
+    }
+
+    configurations {
+         // Help Eclipse discover the compile classpath
+         compileClasspath.extendsFrom(minecraft)
+         compileClasspath.extendsFrom(minecraftLibraries)
+         compileClasspath.extendsFrom(modImplementation)
     }
 }
