@@ -10,9 +10,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(GuiMainMenu.class)
 public class ExampleMixin {
 
-    @Inject(at = @At("TAIL"), method = "<init>()V")
-    private void init(CallbackInfo ci) {
-        ModConstants.LOGGER.info("This line is printed by a mixin from Common!");
-    }
+	@Inject(at = @At("TAIL"), method = "<init>()V")
+	private void init(CallbackInfo ci) {
+		ModConstants.LOGGER.info("This line is printed by a mixin from Common!");
+	}
 
 }
