@@ -1,4 +1,6 @@
-# WARNING THIS IS NOT READY FOR USE
+# Warning this project is fairly new, but should be mostly stable now, use at your own risk
+
+if something goes wrong try to delete your gradle cache.
 
 ## LegacyModding Example Mod
 ***
@@ -40,6 +42,7 @@ Install these plugins
 1) [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
 1) [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 1) [Gradle for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle)
+1) [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 `File > Open Folder` select the project folder, you should see an elephant icon, your gradle tasks are there.
 
@@ -48,7 +51,12 @@ Install these plugins
 `File > Import... > Existing Gradle Project` select the folder, you should see an elephant icon with gradle text on the bottom, your gradle tasks are there.
 
 ### Running in dev
+
 Run the `Fabric > unimined_runs > runClient` task for the Fabric client for example, `Forge > unimined_runs > runServer` for the forge server.
+
+### Removing a subproject
+
+If you want forge only, or fabric only, just delete said folder, and remove the include at the bottom of settings.gradle
 
 ***
 
