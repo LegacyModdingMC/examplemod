@@ -1,12 +1,12 @@
 # Warning this project is fairly new, but should be mostly stable now, use at your own risk
 
-if something goes wrong try to delete your gradle cache.
+if something goes wrong try to delete your gradle cache, also for 1.12 currently forge mixins do not work, this may have to wait on unimixins.
 
 ## LegacyModding Example Mod
 ***
-this is a example mod for both fabric and forge for 1.7.10, but its easy to strip out what you want, based on FDD-XPlat
+this is a example mod for both fabric and forge for 1.12.2 but its easy to strip out what you want, based on FDD-XPlat
 
-This project is a Gradle template that allows you to build Forge/Fabric mods for 1.7.10 using shared code.
+This project is a Gradle template that allows you to build Forge/Fabric mods for 1.12.2 using shared code.
 
 This project is powered by [Unimined](https://github.com/unimined/unimined).
 

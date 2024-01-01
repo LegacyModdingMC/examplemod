@@ -1,8 +1,8 @@
 package com.author.examplemod;
 
-import cpw.mods.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod;
 
-@Mod(modid = ModConstants.MOD_ID, version = "1.0.0", name = "ExampleMod", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(modid = ModConstants.MOD_ID, version = "1.0.0", name = "ExampleMod", acceptedMinecraftVersions = "[1.12.2]")
 public class ExampleModForge {
 
 	public ExampleModForge() {

@@ -4,8 +4,15 @@ archivesBaseName = "${mod_name}-Forge-${minecraft_version}"
 dependencies {
 	// Add your dependencies here
 
+	// Mixinbooter. Can be removed if not needed
+	modImplementation 'zone.rong:mixinbooter:8.4'
+
 	// Unimixins. Can be removed if not needed
-	modImplementation("com.github.LegacyModdingMC.UniMixins:unimixins-all-1.7.10:"+project.unimixins_version+":dev")
+	//modImplementation("com.github.LegacyModdingMC.UniMixins:unimixins-mixin-1.7.10:"+project.unimixins_version+":dev")
+	//modImplementation("com.github.LegacyModdingMC.UniMixins:unimixins-compat-1.7.10:"+project.unimixins_version+":dev")
+	//modImplementation("com.github.LegacyModdingMC.UniMixins:unimixins-mixinbooterlegacy-1.7.10:"+project.unimixins_version+":dev")
+	//modImplementation("com.github.LegacyModdingMC.UniMixins:unimixins-mixinextras-1.7.10:"+project.unimixins_version+":dev")
+	//modImplementation("com.github.LegacyModdingMC.UniMixins:unimixins-mixingasm-1.7.10:"+project.unimixins_version+":dev")
 
 	// Do not edit or remove
 	implementation project(":Common")
@@ -35,7 +42,7 @@ publishing {
 
 unimined.minecraft {
 	minecraftForge {
-		loader forge_version+"-"+minecraft_version
+		loader forge_version
 	}
 
 	defaultRemapJar = true
