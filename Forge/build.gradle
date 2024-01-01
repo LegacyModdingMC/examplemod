@@ -37,6 +37,8 @@ unimined.minecraft {
 	minecraftForge {
 		loader forge_version+"-"+minecraft_version
 	}
+
+	defaultRemapJar = true
 }
 
 processResources {

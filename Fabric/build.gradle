@@ -46,6 +46,8 @@ unimined.minecraft {
 			javaVersion = JavaVersion.VERSION_17
 		}
 	}
+
+	defaultRemapJar = true
 }
 
 processResources {

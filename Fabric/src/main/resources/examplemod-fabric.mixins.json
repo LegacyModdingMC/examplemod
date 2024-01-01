@@ -1,16 +1,14 @@
 {
-  "required": true,
-  "minVersion": "0.8",
-  "package": "com.author.examplemod.mixin",
-  "compatibilityLevel": "JAVA_8",
-  "mixins": [
-  ],
-  "client": [
-    "client.ExampleFabricMixin"
-  ],
-  "server": [
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+	"required": true,
+	"minVersion": "0.8",
+	"package": "com.author.examplemod.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [],
+	"client": [
+		"client.ExampleFabricMixin"
+	],
+	"server": [],
+	"injectors": {
+		"defaultRequire": 1
+	}
 }
